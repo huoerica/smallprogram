@@ -1,0 +1,11 @@
+<!--pages/demo/demo.wxml-->
+<view class="demo-container">
+    <text>pages/demo/demo.wxml</text>
+    <view>
+        <map longitude="{{coordinate.longitude}}" latitude="{{coordinate.latitude}}"></map>
+    </view>
+
+    <view>
+        
+    </view>
+</view>
