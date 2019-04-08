@@ -14,19 +14,19 @@ Page({
    */
   onLoad: function (options) {
       console.log(options);
-      wx.getLocation({
-          type: 'wgs84',
-          success: (res) => {
-              var locate = { latitude: res.latitude, longitude: res.longitude };
-              this.setData({
-                  coordinate: locate
-              });
-              var latitude = res.latitude // 纬度
-              var longitude = res.longitude // 经度
+      // wx.getLocation({
+      //     type: 'wgs84',
+      //     success: (res) => {
+      //         var locate = { latitude: res.latitude, longitude: res.longitude };
+      //         this.setData({
+      //             coordinate: locate
+      //         });
+      //         var latitude = res.latitude // 纬度
+      //         var longitude = res.longitude // 经度
 
-              console.log(this.data);
-          }
-      })
+      //         console.log(this.data);
+      //     }
+      // })
   },
 
   /**
@@ -40,7 +40,7 @@ Page({
         pagesize: 8
       },
       dataType: 'json',
-      method: 'get',
+      method: 'post',
       responseType: 'text',
       success: (res) => {
         console.log(res)

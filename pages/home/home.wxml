@@ -11,13 +11,13 @@
 <view>列表</view>
 <view class="view-ul">
   <view class="view-li" wx:for="{{dataList}}" wx:key="id" hover-class="active">
-    <image class="li-img" src="../../lib/img/collect2.png" />
+    <image class="li-img" src="{{item.picture}}" />
     <view class="li-content">
       <view class="li-title">{{item.title}}</view>
-      <view class="li-text">内容简介</view>
+      <!-- <view class="li-text">内容简介</view> -->
       <view class="li-desc flex">
-        <text class="iconfont icon-addr"> {{item.address}}</text>
         <text class="iconfont icon-addr"> {{item.date}}</text>
+        <!-- <text class="iconfont icon-addr"> {{item.address}}</text> -->
       </view>
     </view>
     <view class="li-arrow">

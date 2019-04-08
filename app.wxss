@@ -83,8 +83,8 @@ switch, slider {
 }
 
 .view-ul>.view-li .li-img {
-  width: 100rpx;
-  height: 100rpx;
+  width: 180rpx;
+  height: 120rpx;
   margin-right: 20rpx;
   background-color: #dedede;
 }

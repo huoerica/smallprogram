@@ -27,40 +27,46 @@ Page({
     dataList: [
       {
         id: 1,
-        title: '一个人，42天，10000公里，去看想看的风景',
+        picture: 'http://wj.yhsnft.com/yhs/mw_townnews/201904/1554276562471_RGzHP.jpg',
+        title: '玉皇山南金融学院第二期董秘培训班圆满落幕！',
         content: '一个人，42天，10000公里，去看想看的风景',
-        date: '2019-04-08',
+        date: '2019-03-31 17:30',
         address: '稻城'
       },
       {
         id: 2,
-        title: '一个人，42天，10000公里，去看想看的风景',
+        picture: 'http://wj.yhsnft.com/yhs/mw_townnews/201903/1553847881672_hXQki.jpg',
+        title: '“山南论剑”之区块链项目路演交流会顺利举行',
         content: '一个人，42天，10000公里，去看想看的风景',
-        date: '2019-04-08',
+        date: '2019-03-29 17:00',
         address: '稻城'
       },
       {
         id: 3,
-        title: '一个人，42天，10000公里，去看想看的风景',
+        picture: 'http://wj.yhsnft.com/yhs/mw_townnews/201903/1553764154118_UMRkg.jpg',
+        title: '提升技能，拓展视野！玉皇山南金融学院第二期董秘培训班开班啦！',
         content: '一个人，42天，10000公里，去看想看的风景',
         date: '2019-04-08',
         address: '稻城'
       },
       {
         id: 4,
-        title: '一个人，42天，10000公里，去看想看的风景',
+        picture: 'http://wj.yhsnft.com/yhs/mw_activity/201903/1553579590799_QcMiZ.jpeg',
+        title: '杭州玉皇山南基金小镇经营管理有限公司招聘需求',
         content: '一个人，42天，10000公里，去看想看的风景',
         date: '2019-04-08',
         address: '稻城'
       }
-    ]
+    ],
+    page: 1,
+    pagesize: 8
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    
   },
 
   /**
@@ -74,7 +80,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
+    this.queryDataList();
   },
 
   /**
@@ -110,5 +116,23 @@ Page({
    */
   onShareAppMessage: function() {
 
+  },
+
+  /**
+   * 获取列表数据
+   */
+  queryDataList (currpage) {
+    this.setData({
+      page: currpage || 1
+    });
+    console.log(this.data)
+    // wx.request({
+    //   url: 'utils/dataList.json',
+    //   dataType: 'json',
+    //   method: 'get',
+    //   success: (res) => {
+    //     console.log(res.data)
+    //   }
+    // })
   }
 })

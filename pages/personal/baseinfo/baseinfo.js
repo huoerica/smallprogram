@@ -69,5 +69,25 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  /**
+  * 日期选择空间
+  */
+  bindDateChange(e) {
+    console.log('picker:日期', e.detail.value)
+    this.setData({
+      formData: {
+        birth: e.detail.value
+      }
+    })
+  },
+  /**
+   * 省市区
+   */
+  bindRegionChange(e) {
+    console.log('picker:省市区', e.detail)
+    this.setData({
+      address: e.detail.value
+    });
   }
 })
