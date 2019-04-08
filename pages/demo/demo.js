@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-      coordinate: { }      
+      coordinate: { },
+      detail: {}    
   },
 
   /**
@@ -31,7 +32,21 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: () => {
+    wx.request({
+      url: 'http://yhsnft.com/townview/findviews', // 仅为示例，并非真实的接口地址
+      data: {
+        page: 1,
+        pagesize: 8
+      },
+      dataType: 'json',
+      method: 'get',
+      responseType: 'text',
+      success: (res) => {
+        console.log(res)
+        console.log(this)
+      }
+    })
   
   },
 

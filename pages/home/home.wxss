@@ -1,0 +1,22 @@
+/* pages/home.wxss */
+.home-banner swiper-item>image{
+  display: block;
+  width: 100%;
+}
+
+.home-banner .date {
+  position: absolute;
+  top: 30rpx;
+  left: 20rpx;
+  color: #ffffff;
+  line-height: 50rpx;
+}
+
+.home-banner .content {
+  position: absolute;
+  top: 100rpx;
+  left: 20rpx;
+  color: #ffffff;
+}
+
+

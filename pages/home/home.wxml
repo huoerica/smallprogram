@@ -1,0 +1,26 @@
+<swiper class="home-banner" indicator-dots="true" autoplay="false" interval="3000" duration="1000" circular="true" indicator-active-color="rgba(255,255,255,0.8)">
+  <block wx:for="{{banners}}" wx:key="index">
+    <swiper-item>
+      <image src="{{item.img}}" class="slide-image" width="355" height="150" />
+      <text class="date">{{item.date}}</text>
+      <view class="content">{{item.content}}</view>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view>列表</view>
+<view class="view-ul">
+  <view class="view-li" wx:for="{{dataList}}" wx:key="id" hover-class="active">
+    <image class="li-img" src="../../lib/img/collect2.png" />
+    <view class="li-content">
+      <view class="li-title">{{item.title}}</view>
+      <view class="li-text">内容简介</view>
+      <view class="li-desc flex">
+        <text class="iconfont icon-addr"> {{item.address}}</text>
+        <text class="iconfont icon-addr"> {{item.date}}</text>
+      </view>
+    </view>
+    <view class="li-arrow">
+    </view>
+  </view>
+</view>

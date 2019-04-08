@@ -1,0 +1,65 @@
+<view>表单</view>
+<form>
+  <view class="view-ul">
+    <view class="view-li">
+      <view class="form-hd">姓名</view>
+      <view class="form-bd">
+        <input type="text" value="{{formData.name}}" placeholder="text" />
+      </view>
+    </view>
+    <view class="view-li">
+      <view class="form-hd">性别</view>
+      <view class="form-bd">
+        <radio-group class="radio-group" bindchange="radioChange">
+          <label class="radio-inline">
+            <radio value="女" /> 女
+          </label>
+          <label class="radio-inline">
+            <radio value="男" /> 男
+          </label>
+        </radio-group>
+      </view>
+    </view>
+    <view class="view-li">
+      <view class="form-hd">爱好</view>
+      <view class="form-bd">
+        <checkbox-group class="check-group">
+          <label class="check-inline">
+            <checkbox value="ppq" /> 乒乓球
+          </label>
+          <label class="check-inline">
+            <checkbox value="ymq" /> 羽毛球
+          </label>
+        </checkbox-group>
+      </view>
+    </view>
+    <view class="view-li">
+      <view class="form-hd">出生日期</view>
+      <view class="form-bd">
+        <picker mode="date" value="{{formData.birth}}" start="2015-09-01" end="2025-09-01" bindchange="bindDateChange">
+          <view class="picker">
+            <text wx:if="{{!formData.birth}}" class="placeholder">请选择</text> {{formData.birth}}
+          </view>
+        </picker>
+      </view>
+      <view class="li-arrow"></view>
+    </view>
+    <view class="view-li">
+      <view class="form-hd">常用住址</view>
+      <view class="form-bd">
+        <picker mode="region" value="{{address}}" bindchange="bindRegionChange">
+          <view class="picker">
+            <text wx:if="{{!address.length}}" class="placeholder">请选择</text> {{address}}
+          </view>
+        </picker>
+      </view>
+      <view class="li-arrow"></view>
+    </view>
+    <view class="view-li">
+      <view class="form-hd">详细地址</view>
+      <view class="form-bd">
+        <input type="text" placeholder="text" />
+      </view>
+    </view>
+  </view>
+</form>

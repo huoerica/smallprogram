@@ -1,4 +1,6 @@
 /**app.wxss**/
+@import 'lib/iconfont/iconfont.wxss';
+
 .container {
   height: 100%;
   display: flex;
@@ -7,4 +9,153 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-} 
+}
+
+page{
+  font-size: 32rpx;
+  font-weight: 400;
+}
+.iconfont {
+  font-size: 28rpx;
+  font-weight: 300;
+  line-height: 28rpx;
+}
+
+input, radio, checkbox, picker, picker .picker, picker-view {
+  height: 40rpx;
+  line-height: 40rpx;
+  min-height: 40rpx;
+}
+
+.input-placeholder, .textarea-placeholder, .placeholder {
+  color: #999;
+}
+
+switch, slider {
+  height: 60rpx;
+  min-height: 60rpx;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex > view, .flex > text {
+  flex: 1;
+}
+
+/* 列表样式 */
+
+.view-ul {
+  position: relative;
+}
+
+.view-ul::before, .view-ul::after {
+  content: " ";
+  display: block;
+  height: 2rpx;
+  background-color: #dedede;
+  transform: scaleY(0.5);
+}
+
+.view-ul>.view-li {
+  position: relative;
+  transition: all 0.3s;
+  padding: 20rpx 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+.view-ul>.view-li.active {
+  background-color: #f5f5f5;
+}
+
+.view-ul>.view-li + .view-li::before, .view-ul>.view-li + .view-li:before {
+  position: absolute;
+  top: 0;
+  left: 30rpx;
+  right: 30rpx;
+  content: "";
+  display: block;
+  border-top: 2rpx solid #dedede;
+  transform: scaleY(0.5);
+}
+
+.view-ul>.view-li .li-img {
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+  background-color: #dedede;
+}
+
+.view-ul>.view-li .li-icon{
+  font-size: 36rpx;
+  margin-right:20rpx;
+}
+
+.view-ul>.view-li .li-content {
+  flex: 1;
+  height: 100%;
+}
+
+.view-ul>.view-li .li-text {
+  margin-top: 10rpx;
+}
+
+.view-ul>.view-li .li-desc {
+  font-size: 28rpx;
+  color: #808080;
+  margin-top: 10rpx;
+}
+
+.li-arrow:after {
+  content: " ";
+  display: inline-block;
+  height: 14rpx;
+  width: 14rpx;
+  border-width: 2rpx 2rpx 0 0;
+  border-color: #c8c8cd;
+  border-style: solid;
+  -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: absolute;
+  top: 50%;
+  margin-top: -8rpx;
+  right: 30rpx;
+}
+
+/* 表单样式 */
+
+form>view {
+  padding: 20rpx 30rpx;
+}
+
+form .view-ul>.view-li + .view-li::before,
+form .view-ul>.view-li + .view-li:before {
+  right: 0;
+}
+
+form .view-ul>.view-li {
+  align-items: center;
+}
+
+form .form-hd {
+  display: block;
+  width: 200rpx;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+form .form-bd {
+  flex: 1;
+}
+
+.radio-group {
+  position: relative;
+}
+
+.radio-group .radio-inline {
+  width: 30rpx;
+  height: 30rpx;
+}

@@ -1,11 +1,14 @@
-<!--pages/demo/demo.wxml-->
-<view class="demo-container">
-    <text>pages/demo/demo.wxml</text>
-    <view>
-        <map longitude="{{coordinate.longitude}}" latitude="{{coordinate.latitude}}"></map>
+<view>个人中心</view>
+<view class="view-ul">
+<navigator class="view-li" 
+    url="/pages/personal/baseinfo/baseinfo"
+    hover-class="active"
+  >
+    <view class="iconfont icon-credit li-icon"></view>
+    <view class="li-content">
+      <view class="li-title">基本信息</view>
     </view>
-
-    <view>
-        
+    <view class="li-arrow">
     </view>
+  </navigator>
 </view>
