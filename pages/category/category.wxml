@@ -5,9 +5,9 @@
     </view>
   </view>
   <view class="grid-item grid-main">
-    <swiper class="swiper-cate" indicator-dots duration="500" vertical current="currcate" autoplay="{{autoplay}}">
+    <swiper class="swiper-cate" duration="100" vertical current="{{currcate}}" autoplay="{{autoplay}}">
       <block wx:for="{{category}}" wx:for-item="item" wx:key="item.catename">
-        <swiper-item class="swiper-cate-item">
+        <swiper-item class="swiper-cate-item" catchtouchmove="catchTouchMove">
           <image src="{{item.banner}}" class="cate-item-img" mode="widthFix" />
           <view class="cate-split">
             <text>{{item.catename}}</text>
