@@ -205,7 +205,7 @@ Page({
       currcate: e.target.dataset.index
     });
   },
-  catchTouchMove (event) {
+  catchTouchMove(event) {
     return false;
   },
   /**
