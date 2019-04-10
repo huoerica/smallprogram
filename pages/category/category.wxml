@@ -1,31 +1,27 @@
-<view class="section">
-  <view class="section__title">vertical scroll</view>
-  <scroll-view
-    scroll-y
-    style="height: 200px;"
-    bindscrolltoupper="upper"
-    bindscrolltolower="lower"
-    bindscroll="scroll"
-    scroll-into-view="{{toView}}"
-    scroll-top="{{scrollTop}}"
-  >
-    <view id="green" class="scroll-view-item bc_green"></view>
-    <view id="red" class="scroll-view-item bc_red"></view>
-    <view id="yellow" class="scroll-view-item bc_yellow"></view>
-    <view id="blue" class="scroll-view-item bc_blue"></view>
-  </scroll-view>
-
-  <view class="btn-area">
-    <button size="mini" bindtap="tap">click me to scroll into view</button>
-    <button size="mini" bindtap="tapMove">click me to scroll</button>
+<view class="grid-cate">
+  <view class="grid-item grid-aside">
+    <view class="aside-item {{index === currcate ? 'active' : '' }}" wx:for="{{category}}" wx:for-index="index" wx:key="item.catename" data-index="{{index}}" bindtap="changeCate">
+      {{item.catename}}
+    </view>
   </view>
-</view>
-<view class="section section_gap">
-  <view class="section__title">horizontal scroll</view>
-  <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
-    <view id="green" class="scroll-view-item_H bc_green"></view>
-    <view id="red" class="scroll-view-item_H bc_red"></view>
-    <view id="yellow" class="scroll-view-item_H bc_yellow"></view>
-    <view id="blue" class="scroll-view-item_H bc_blue"></view>
-  </scroll-view>
+  <view class="grid-item grid-main">
+    <swiper class="swiper-cate" indicator-dots duration="500" vertical current="currcate" autoplay="{{autoplay}}">
+      <block wx:for="{{category}}" wx:for-item="item" wx:key="item.catename">
+        <swiper-item class="swiper-cate-item">
+          <image src="{{item.banner}}" class="cate-item-img" mode="widthFix" />
+          <view class="cate-split">
+            <text>{{item.catename}}</text>
+          </view>
+          <view class="cate-cells">
+            <view class="cate-cell" wx:for="{{item.list}}" wx:for-item="detail" wx:key="detail.catename">
+              <image src="{{detail.picture}}" class="cate-item-img" mode="widthFix" />
+              <view class="detail-name">
+                {{detail.catename}} {{detail.number}} 
+              </view>
+            </view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
 </view>

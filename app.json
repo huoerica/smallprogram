@@ -1,11 +1,11 @@
 {
   "pages": [
+    "pages/category/category",
     "pages/home/home",
     "pages/logs/logs",
     "pages/index/index",
     "pages/demo/demo",
-    "pages/personal/baseinfo/baseinfo",
-    "pages/category/category"
+    "pages/personal/baseinfo/baseinfo"    
   ],
   "window": {
     "backgroundColor": "#eeeeee",

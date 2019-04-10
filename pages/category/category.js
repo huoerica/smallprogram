@@ -201,34 +201,23 @@ Page({
           }
         ]
       }
-    ]
-
+    ],
+    currcate: 0,
+    autoplay: false
   },
-  upper(e) {
-    console.log(e)
-  },
-  lower(e) {
-    console.log(e)
-  },
-  scroll(e) {
-    console.log(e)
-  },
-  tap(e) {
-    for (let i = 0; i < order.length; ++i) {
-      if (order[i] === this.data.toView) {
-        this.setData({
-          toView: order[i + 1]
-        })
-        break
-      }
-    }
-  },
-  tapMove(e) {
+  changeCate: function (e) {
+    console.log(e.target.dataset.index);
     this.setData({
-      scrollTop: this.data.scrollTop + 10
-    })
+      currcate: e.target.dataset.index,
+      autoplay: true
+    });
+    setTimeout(()=>{
+      this.setData({
+        autoplay: false
+      });
+    },500);
   },
-
+  
   /**
    * 生命周期函数--监听页面加载
    */

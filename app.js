@@ -12,15 +12,15 @@ App({
                 // 发送 res.code 到后台换取 openId, sessionKey, unionId
               if (res.code) {
                 //发起网络请求
-                wx.request({
-                  url: 'https://test.com/onLogin',
-                  data: {
-                    code: res.code
-                  },
-                  success: (res2) => {
-                    console.log(res2)
-                  }
-                })
+                // wx.request({
+                //   url: 'https://test.com/onLogin',
+                //   data: {
+                //     code: res.code
+                //   },
+                //   success: (res2) => {
+                //     console.log(res2)
+                //   }
+                // })
               } else {
                 console.log('登录失败！' + res.errMsg)
               }

@@ -1,1 +1,96 @@
 /* pages/category/category.wxss */
+
+page {
+  height: 100%;
+}
+
+.grid-cate {
+  display: grid;
+  grid-template-columns: 160rpx 1fr;
+  grid-template-areas: "sidebar main";
+  height: 100%;
+  overflow: hidden;
+}
+
+.grid-cate .grid-item {
+  height: 100%;
+  overflow: hidden;
+}
+
+.grid-cate .grid-aside {
+  border-right: 1px solid #f1f1f1;
+}
+
+.swiper-cate {
+  height: 100%;
+}
+
+.swiper-cate .swiper-cate-item {
+  padding: 30rpx 40rpx;
+  box-sizing: border-box;
+}
+
+.swiper-cate .cate-item-img {
+  width: 100%;
+}
+
+.swiper-cate .cate-split {
+  position: relative;
+  padding: 20rpx;
+  text-align: center;
+}
+
+.swiper-cate .cate-split::before {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 1px;
+  background-color: rgb(163, 163, 163);
+  transform: scaleY(0.5);
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+}
+
+.aside-item{
+  padding: 20rpx;
+  text-align: center;
+  border-left: 8rpx solid #fff;
+}
+
+.aside-item.active{
+  border-left-color: rgb(247, 171, 58);
+  color:rgb(247, 171, 58);
+}
+
+.swiper-cate .cate-split text {
+  position: relative;
+  padding: 0 30rpx;
+  color: rgb(247, 171, 58);
+  background-color: #fff;
+}
+.cate-cells {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  overflow: hidden;
+  justify-content: st;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  grid-gap:20rpx 10rpx;
+  text-align: center;
+}
+.cate-cells .cate-cell{
+  background-color: #f5f5f5;
+  overflow: hidden;
+  width: 99%;
+}
+.cate-cells .cate-cell .cate-item-img{
+  width: 80%;
+}
+.cate-cells .cate-cell .detail-name{
+  padding-top:10rpx;
+  font-size: 24rpx;
+  width:100%;
+}
