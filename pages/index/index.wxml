@@ -20,3 +20,12 @@
     <navigator class="" url="/pages/demo/demo" hover-class="navigator-hover">跳转到demo页</navigator>
   </view>
 </view>
+<myul>
+  <myli>item 1</myli>
+  <myli>item 2</myli>
+</myul>
+
+<my-first inner-text="Some text">
+  <view slot="before">slot: before</view>
+  <view slot="after">slot: after</view>
+</my-first>

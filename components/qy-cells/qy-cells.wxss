@@ -1,0 +1,12 @@
+/* components/qy-cells/qy-cells.wxss */
+.qy-cells {
+  position: relative;
+}
+
+.qy-cells::before, .qy-cells::after{
+  content: " ";
+  display: block;
+  height: 2rpx;
+  background-color: #dedede;
+  transform: scaleY(0.5);
+}

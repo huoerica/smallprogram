@@ -1,1 +1,7 @@
-{}
+{
+  "usingComponents": {
+    "my-first": "/components/myfirst/myfirst",
+    "myul": "/components/myul/myul",
+    "myli": "/components/myli/myli"
+  }
+}

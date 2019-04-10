@@ -1,0 +1,25 @@
+/* components/qy-cell/qy-cell.wxss */
+
+.qy-cell {
+  position: relative;
+  transition: all 0.3s;
+  padding: 20rpx 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+.qy-cell.active {
+  background-color: #f5f5f5;
+}
+
+.qy-cell::before, .qy-cell:before{
+  content: " ";
+  display: block;
+  height: 2rpx;
+  background-color: #dedede;
+  transform: scaleY(0.5);
+  position: absolute;
+  top: 0;
+  left: 30rpx;
+  right: 30rpx;
+}

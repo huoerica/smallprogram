@@ -8,19 +8,40 @@
   </block>
 </swiper>
 
-<view>列表</view>
-<view class="view-ul">
-  <view class="view-li" wx:for="{{dataList}}" wx:key="id" hover-class="active">
-    <image class="li-img" src="{{item.picture}}" />
-    <view class="li-content">
-      <view class="li-title">{{item.title}}</view>
-      <!-- <view class="li-text">内容简介</view> -->
-      <view class="li-desc flex">
-        <text class="iconfont icon-addr"> {{item.date}}</text>
-        <!-- <text class="iconfont icon-addr"> {{item.address}}</text> -->
-      </view>
-    </view>
-    <view class="li-arrow">
-    </view>
-  </view>
+<view class="module-title">精选主题</view>
+<view class="flex flex-hot">
+  <navigator class="flex-item" 
+    url="/pages/personal/baseinfo/baseinfo"
+    hover-class="active"
+  >
+    <image src="/lib/img/pic/7.jpg" mode="widthFix"/>
+  </navigator>
+  <navigator class="flex-item" 
+    url="/pages/index/index"
+    hover-class="active"
+  >
+    <image src="/lib/img/pic/8.jpg" mode="widthFix"/>
+  </navigator>
+</view>
+<view class="flex flex-hot">
+  <navigator class="flex-item" 
+    url="/pages/personal/baseinfo/baseinfo"
+    hover-class="active"
+  >
+    <image src="/lib/img/pic/4.jpg" mode="widthFix"/>
+  </navigator>
+</view>
+
+<view class="module-title">最近新品</view>
+<view class="grid grid-new">
+  <block wx:for="{{dataList}}" wx:for-index="nindex">
+  <navigator class="grid-item" wx:for="{{dataList[nindex]}}" wx:for-item="item"
+    url="/pages/personal/baseinfo/baseinfo"
+    hover-class="active"
+  >
+    <image src="{{item.picture}}" mode="widthFix"/>
+    <view class="name">{{item.title}} {{item.weight}}</view>
+    <view class="price">{{item.price ? '¥'+item.price: ''}}</view>
+  </navigator>
+  </block>
 </view>

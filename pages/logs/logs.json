@@ -1,3 +1,7 @@
 {
-  "navigationBarTitleText": "查看启动日志"
+  "navigationBarTitleText": "查看启动日志",
+  "usingComponents": {
+    "qy-cells": "/components/qy-cells/qy-cells",
+    "qy-cell": "/components/qy-cell/qy-cell"
+  }
 }

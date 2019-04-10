@@ -1,0 +1,9 @@
+<view class="wrapper">
+  <slot name="before"></slot>
+  <view>这里是组件的内部细节</view>
+  <view>{{innerText}}</view>
+  <button type="default" bindtap="setInnerText">
+    点击修改 innerText
+  </button>
+  <slot name="after"></slot>
+</view>
