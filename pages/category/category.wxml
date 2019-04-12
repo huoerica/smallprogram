@@ -13,12 +13,19 @@
             <text>{{item.catename}}</text>
           </view>
           <view class="cate-cells">
-            <view class="cate-cell" wx:for="{{item.list}}" wx:for-item="detail" wx:key="detail.catename">
+            <navigator class="cate-cell" hover-class="active" wx:for="{{item.list}}" wx:for-item="detail" wx:key="detail.catename"
+            url="/pages/prodetail/prodetail?catename={{detail.catename}}">
               <image src="{{detail.picture}}" class="cate-item-img" mode="widthFix" />
               <view class="detail-name">
-                {{detail.catename}} {{detail.number}} 
+                {{detail.catename}} {{detail.number}}
               </view>
-            </view>
+            </navigator>
+            <!-- <view class="cate-cell" wx:for="{{item.list}}" wx:for-item="detail" wx:key="detail.catename">
+              <image src="{{detail.picture}}" class="cate-item-img" mode="widthFix" />
+              <view class="detail-name">
+                {{detail.catename}} {{detail.number}}
+              </view>
+            </view> -->
           </view>
         </swiper-item>
       </block>

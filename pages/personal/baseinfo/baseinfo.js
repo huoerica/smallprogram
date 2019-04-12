@@ -19,6 +19,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options);
 
   },
 
@@ -26,14 +27,15 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    console.log("ready");
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    console.log("show");
+    console.log(this.route);
   },
 
   /**

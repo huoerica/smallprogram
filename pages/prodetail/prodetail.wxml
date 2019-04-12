@@ -1,0 +1,16 @@
+<swiper class="detail-swiper">
+  <block wx:for="{{pictures}}" wx:key="{{index}}">
+    <swiper-item>
+      <image wx:if="{{item.type === 1}}" src="{{item.url}}" class="slide-image" mode="widthFix" />
+      <video id="myVideo" wx:else src="{{item.url}}" controls show-play-btn object-fit="cover"></video>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="detail-box">
+  <view class="detail">
+    <view class="title">{{detail.name}}</view>
+  </view>
+
+  <view class="unit">{{detail.unit}} 限购 {{detail.limit}}</view>
+</view>

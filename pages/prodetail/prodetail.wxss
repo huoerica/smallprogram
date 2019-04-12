@@ -1,0 +1,12 @@
+/* pages/prodetail/prodetail.wxss */
+.detail-swiper image,
+.detail-swiper video{width: 100%;height: 100%;}
+
+.detail-box{
+  padding: 30rpx;
+}
+.detail .title{
+  font-size: 32rpx;
+  font-weight: 500;
+  margin-bottom:20rpx;
+}

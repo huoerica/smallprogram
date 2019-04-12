@@ -5,7 +5,8 @@
     "pages/logs/logs",
     "pages/index/index",
     "pages/demo/demo",
-    "pages/personal/baseinfo/baseinfo"    
+    "pages/personal/baseinfo/baseinfo",
+    "pages/prodetail/prodetail"
   ],
   "window": {
     "backgroundColor": "#eeeeee",
